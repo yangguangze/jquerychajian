@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta property="og:image" content="/st/og-image.png"/>
+
+	<title>Sortable. No jQuery.</title>
+
+	<meta name="keywords" content="sortable, reorder, list, javascript, html5, drag and drop, dnd, animation, groups, angular, ng-sortable, react, mixin, effects, rubaxa"/>
+	<meta name="description" content="Sortable - is a minimalist JavaScript library for reorderable drag-and-drop lists on modern browsers and touch devices. No jQuery. Supports Meteor, AngularJS, React and any CSS library, e.g. Bootstrap."/>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+	<link href="st/app.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<!-- Connected lists -->
+	<div class="container" style="height: 520px">
+		<div data-force="30" class="layer block" style="left: 14.5%; top: 0; width: 37%">
+			<ul id="foo" class="block__list block__list_words">
+				<li>бегемот</li>
+				<li>корм</li>
+				<li>антон</li>
+				<li>сало</li>
+				<li>железосталь</li>
+				<li>валик</li>
+				<li>кровать</li>
+				<li>краб</li>
+			</ul>
+		</div>
+	</div>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="Sortable.js"></script>
+	<script>
+		var byId = function (id) { return document.getElementById(id); }
+			Sortable.create(byId('foo'), {
+				group: "words",
+				animation: 150,
+			});
+	</script>
+</body>
+</html>
